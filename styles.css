@@ -1,0 +1,335 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.montserrat-uniquifier {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  font-family: "Montserrat", Sans-Serif;
+}
+.navegacao{
+  background-color: black;
+  color: white;
+  height: 100px;
+  
+  animation-name: navegacao;
+  animation-duration: 4s;
+}
+
+.navegacao ul{
+  margin-top: 0;
+  list-style: none;
+  text-align: right;
+  padding-left: 0;
+  height: 100px;
+  
+}
+.navegacao li{
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 30px;
+  line-height: 100px;
+  font-weight: 100;
+  font-size: 30px;
+}
+.navegacao a{
+  color: white;
+  text-decoration: none;
+}
+.navegacao a:hover{
+  color: #f27609;
+}
+.navegacao li.threeline-icon{
+  display: none;
+}
+.navegacao li.threeline-icon:hover{
+  color: #f27609;
+  cursor: pointer;
+}
+.back-link{
+  color: #f27609;
+  padding: 10px;
+  text-decoration: none;
+}
+.capa{
+  color: white;
+  vertical-align: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+.capa span{
+  color: #f27609;
+  display: block;
+  font-size: 2.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.capa div{
+  display: inline-block;
+  height: 650px;
+}
+.profile-pic{
+  margin-left: 25px;
+  text-align: left;
+  
+  animation-name: titulo-capa;
+  animation-duration: 2s;
+}
+.profile-pic img{
+  width: 45%;
+  display: inline-block;
+  margin-top: 100px;
+  padding-right: 35px;
+  height: auto;
+}
+.profile-title {
+  max-width: 45%;
+  vertical-align: top;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: left; /* <- Mude para evitar distorções no espaçamento */
+  line-height: 1.4;
+  
+  animation-name: profile-capa;
+  animation-duration: 10s;
+}
+.profile-title h1{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.profile-title h2{
+  color: #dddddd;
+  font-size: 1.4em;
+  margin-top: 20px;
+  word-spacing: -1px;
+  line-height: 1.6em;
+}
+.botao-vermais {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2a2a2a;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.botao-vermais:hover {
+  background-color: #f27609;
+  transform: translateY(-2px);
+}
+
+.principalmain{ padding: 80px 180px 80px 100px;
+
+  animation-name: conteudo;
+  animation-duration: 2s;
+}
+.cv-pic {
+  float: left;
+  width: 250px;
+  margin-right: 20px;
+}
+.principalmain h1{
+  color: white;
+  font-weight: normal;
+}
+.principalmain h2{
+  color: #f27609;
+  font-size: 18px;
+  font-weight: Bold;
+  margin-top: 40px;
+  
+}
+.principalmain h3{
+  color: #f27609;
+  font-size: 18px;
+  font-weight: bold;
+  
+  
+}
+.principalmain p{
+  color: white;
+  font-size: 25px;
+  font-weight: 150px;
+  line-height: 40px;
+}
+.caminho{
+  list-style: none;
+  padding-left: 0;
+  color: white;
+  text-decoration: none;
+}
+.caminho a{
+  color: white;
+  text-decoration: none;
+}
+.caminho li{
+  display: inline-block;
+  text-decoration: none;
+}
+.social-img{
+  width: 50px;
+  margin-right: 10px;
+}
+.miniatura{
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  margin-right: 1%;
+  margin-bottom: 15px;
+  background-size: contain;
+  overflow: hidden;
+}
+.miniatura a{
+  text-decoration: none;
+}
+.blackbox{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  padding-top: 120px;
+  transition: 1s;
+}
+.blackbox:hover{
+  opacity: 0.8;
+  transition: 1s;
+}
+.blackbox-text{
+  text-align: center;
+}
+.blackbox-text h1{
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.blackbox-text h2{
+  text-transform: none;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+
+
+/* Animações*/
+@keyframes profile-capa{
+  0% {opacity: 0; transform: translate(0px,20px)}
+  100% {opacity: 1; transform: translate(0px,0px)}
+}
+@keyframes titulo-capa {
+  0% {opacity: 0; transform: translate(0px,-20px)}
+  100% {opacity: 1; transform: translate(0px,0px)}
+}
+@keyframes conteudo {
+  0% {opacity: 0; transform: translate(-20px,0px)}
+  100% {opacity: 1; transform: translate(0px,0px)}
+}
+@keyframes navegacao {
+  0% {opacity: 0;}
+  50%{opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+/*Responsividade media query*/
+@media (max-width: 1000px) {
+  .capa {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-text {
+    margin-top: 10px;
+  }
+  
+  .navegacao li{
+   display: none;
+  }
+   .navegacao li.threeline-icon{
+   display: inline-block;
+ }
+ 
+ .capa div{
+  display: block;
+  height: auto;
+}
+ .profile-pic{
+   right: 500%;
+ }
+ .profile-title{
+   position: static;
+   max-width: 100%;
+   margin-top: 10px;
+   text-align: center;
+   background-color: ;
+  }
+.profile-title h1, .profile-title h2{
+  text-align: center;
+  margin-top: 0;
+}
+.profile-pic img{
+  margin-bottom: 10px;
+  margin-top: 0;
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.principalmain{ padding: 10px 5% 40px 5%;
+}
+.principalmain p{
+  text-align: left;
+  line-height: 30px;
+}
+.caminho li{
+  font-size: 14px;
+}
+.cv-pic {
+  float: none;
+  max-width: 100%;
+  margin: 0;
+}
+.miniatura{
+  max-width: 100%;
+  background-size: auto 100%;
+}
+.blackbox{
+  opacity: 0.8;
+}
+.menujs{
+  height: auto;
+}
+.menujs ul{
+  height: auto;
+  text-align: center;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+.menujs li{
+  display: block;
+  border-bottom: solid grey 1px;
+  width: 100%;
+  padding: 0;
+}
+
+
+}
